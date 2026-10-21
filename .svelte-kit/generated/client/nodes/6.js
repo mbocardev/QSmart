@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/queue/scan/+page.svelte";

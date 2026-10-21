@@ -1,0 +1,16 @@
+# Dockerfile.dev — Mode développement avec hot-reload
+FROM node:20-slim
+
+# Installer les certificats SSL CA
+RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install
+
+COPY svelte.config.js ./
+
+EXPOSE 5173
+
+CMD ["sh", "-c", "npx svelte-kit sync && npm run dev -- --host 0.0.0.0"]

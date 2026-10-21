@@ -1,0 +1,86 @@
+|-- .dockerignore
+|-- .env
+|-- .env.example
+|-- .env.local
+|-- .gitignore
+|-- .svelte-kit
+    |-- ambient.d.ts
+    |-- generated
+        |-- client
+            |-- app.js
+            |-- matchers.js
+            |-- nodes
+                |-- 0.js
+                |-- 1.js
+                |-- 2.js
+                |-- 3.js
+                |-- 4.js
+                |-- 5.js
+                |-- 6.js
+                |-- 7.js
+    |-- non-ambient.d.ts
+    |-- tsconfig.json
+|-- docker-compose.dev.yml
+|-- docker-compose.init.yml
+|-- docker-compose.yml
+|-- docker-qsmart.zip
+|-- Dockerfile
+|-- Dockerfile.dev
+|-- DOCKER_README.md
+|-- package-lock.json
+|-- package.json
+|-- README.md
+|-- src
+    |-- app.css
+    |-- app.d.ts
+    |-- app.html
+    |-- hooks.server.ts
+    |-- lib
+        |-- stores
+            |-- queue.ts
+        |-- supabase.ts
+        |-- utils
+            |-- push.ts
+            |-- token.ts
+    |-- routes
+        |-- +layout.svelte
+        |-- +page.svelte
+        |-- api
+            |-- auth
+                |-- +server.ts
+            |-- push
+                |-- notify
+                    |-- +server.ts
+                |-- subscribe
+                    |-- +server.ts
+            |-- qr
+                |-- [id]
+                    |-- +server.ts
+            |-- scan
+                |-- +server.ts
+        |-- dashboard
+            |-- +layout.server.ts
+            |-- +page.svelte
+        |-- kiosk
+            |-- [id]
+                |-- +page.svelte
+        |-- queue
+            |-- scan
+                |-- +page.svelte
+            |-- [id]
+                |-- +page.svelte
+|-- static
+    |-- manifest.json
+    |-- sw.js
+|-- supabase
+    |-- migrations
+        |-- 001_schema.sql
+|-- svelte.config.js
+|-- tailwind.config.js
+|-- vite.config.js
+|-- {src
+    |-- {routes
+        |-- {dashboard,kiosk,queue,api
+            |-- scan},lib
+                |-- {components,stores,utils}},supabase
+                    |-- migrations,static}
